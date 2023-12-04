@@ -49,6 +49,12 @@ export default async function Navbar() {
                 {/* Show these links if there is a logged in user */}
                 <Link
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  href="/favorites"
+                >
+                  Favorites
+                </Link>
+                <Link
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   href="/cars"
                 >
                   Cars

@@ -1,7 +1,16 @@
-import React from 'react'
+import React from "react";
+import { supabaseServerClient } from "../lib/initSupabase";
+import { Favorite } from "../lib/types";
+import FavoritesList from "./FavoritesList";
 
-export default function FavoritesPage() {
+export default async function FavoritesPage() {
+  const { data, error } = await supabaseServerClient
+    .from("favorites")
+    .select("*");
+  const favorites = data as Favorite[];
   return (
-    <div>page</div>
-  )
+    <div>
+      <FavoritesList favorites={favorites} />
+    </div>
+  );
 }

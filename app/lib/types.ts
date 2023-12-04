@@ -6,9 +6,21 @@ export type Car = {
   year: number;
 };
 
+export type Favorite = {
+  id: string;
+  bookId: string;
+  title: string;
+  thumbnail_url: string;
+  reader: string;
+};
 
-
-
+export type Review = {
+  id: string;
+  bookId: string;
+  text: string;
+  rating: number;
+  reader: string;
+};
 
 //Google Books API Response types - Do not modify! -------------------------------------
 export type GoogleBooksApiResponse = {

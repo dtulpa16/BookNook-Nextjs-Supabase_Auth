@@ -16,7 +16,7 @@ export default async function BookDetails({ book }: BookDetailsProps) {
         <img
           src={book.volumeInfo.imageLinks.thumbnail}
           alt={book.volumeInfo.title}
-          className="md:w-1/3 object-cover rounded mr-4 mb-4 md:mb-0"
+          className="md:w-1/3 object-cover rounded mr-8 mb-4 md:mb-0"
         />
         <div className="md:w-2/3">
           <h1 className="text-2xl font-bold text-gray-800 mb-2">

@@ -6,7 +6,7 @@ type BookCardProps = {
   books: GoogleBooksApiResponse;
 };
 
-export default function BookCard({ books }: BookCardProps) {
+export default function BookList({ books }: BookCardProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
       {books.items.map((el) => (

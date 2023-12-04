@@ -1,4 +1,4 @@
-import BookCard from "@/app/components/BookCard";
+import BookList from "@/app/components/BookList";
 import { GoogleBooksApiResponse } from "@/app/lib/types";
 import React from "react";
 
@@ -13,7 +13,7 @@ export default async function SearchPage({
   const books: GoogleBooksApiResponse = await data.json();
   return (
     <div>
-      <BookCard books={books}/>
+      <BookList books={books}/>
     </div>
   );
 }
