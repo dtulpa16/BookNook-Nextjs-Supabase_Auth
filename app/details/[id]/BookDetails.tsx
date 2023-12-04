@@ -1,15 +1,14 @@
 import { supabaseServerClient } from "@/app/lib/initSupabase";
 import { BookVolume } from "@/app/lib/types";
+import { User } from "@supabase/auth-helpers-nextjs";
 import React from "react";
 
 type BookDetailsProps = {
   book: BookVolume;
+  user: User | null;
 };
 
-export default async function BookDetails({ book }: BookDetailsProps) {
-  const {
-    data: { user },
-  } = await supabaseServerClient.auth.getUser();
+export default async function BookDetails({ book, user }: BookDetailsProps) {
   return (
     <div className="bg-white p-6 md:p-10 lg:p-12 max-w-5xl mx-auto rounded-lg border border-gray-200 shadow-md">
       <div className="flex flex-col md:flex-row">
