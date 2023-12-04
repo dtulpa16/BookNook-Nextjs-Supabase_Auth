@@ -26,7 +26,7 @@ export default function BookList({ books }: BookCardProps) {
                 {el.volumeInfo.title}
               </h1>
               <h2 className="text-md text-gray-600">
-                {el.volumeInfo.authors[0]}
+                {el.volumeInfo.authors?.[0]}
               </h2>
               <p className="line-clamp-2 xl:text-md text-sm text-gray-500">
                 {el.volumeInfo.description}

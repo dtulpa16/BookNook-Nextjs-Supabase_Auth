@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -7,7 +8,7 @@ export default function SearchBar() {
       action={async (formData: FormData) => {
         "use server";
         const search = formData.get("search")?.toString();
-        redirect(`search/${search}/`);
+        redirect(`/search/${search}/`);
       }}
       className="flex justify-center mt-8 mb-4 w-11/12 mx-auto"
     >

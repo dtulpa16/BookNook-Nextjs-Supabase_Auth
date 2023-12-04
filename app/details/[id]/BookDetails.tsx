@@ -10,7 +10,7 @@ type BookDetailsProps = {
 
 export default async function BookDetails({ book, user }: BookDetailsProps) {
   return (
-    <div className="bg-white p-6 md:p-10 lg:p-12 max-w-5xl mx-auto rounded-lg border border-gray-200 shadow-md">
+    <div className="bg-white p-6 md:p-10 lg:p-12 w-full mx-auto rounded-lg border border-gray-200 shadow-md">
       <div className="flex flex-col md:flex-row">
         <img
           src={book.volumeInfo.imageLinks.thumbnail}
