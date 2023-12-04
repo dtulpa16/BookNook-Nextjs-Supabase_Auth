@@ -1,5 +1,9 @@
+import { supabaseServerClient } from "./lib/initSupabase";
 
-export default function Home() {
+export default async function Home() {
+  const {
+    data: { user },
+  } = await supabaseServerClient.auth.getUser();
   // Important - Before adding features:
   // -Add data to your cars table in Supabase
   // -Run the server, register, then sign in
@@ -12,9 +16,15 @@ export default function Home() {
   // let data = await fetch("googleAPIendpoint...")
   // let books : GoogleBooksApiResponse = await data.json()
   // console.log("Book API Data: ", books)
+
+  let usersEmail = user?.email;
+
   return (
-    <main>
-      
+    <main className="flex justify-center items-center mt-24 bg-gray-100">
+      <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-gray-400">
+        Welcome,{" "}
+        <span className="text-blue-500">{usersEmail?.split("@")[0]}</span>
+      </h1>
     </main>
-  )
+  );
 }

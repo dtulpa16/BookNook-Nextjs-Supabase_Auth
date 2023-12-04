@@ -17,7 +17,7 @@ export default async function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               {/* Brand Name */}
               <Link href="/" className="font-bold text-xl pl-4">
-                MyAwesomeApp
+                BookNook
               </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
